@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
 import { Alert, AlertTitle, AlertDescription } from "@/components/ui/alert"
+import { CheckCircle2 } from 'lucide-react'
 
 export default function Contact() {
   const [state, handleSubmit] = useForm("xzzpndyd")
@@ -13,10 +14,11 @@ export default function Contact() {
     return (
       <div className="max-w-2xl mx-auto">
         <h1 className="text-4xl font-bold mb-8 text-foreground">Contact Me</h1>
-        <Alert variant="success">
-          <AlertTitle>Thank you!</AlertTitle>
-          <AlertDescription>Your message has been sent. I will get back to you soon.</AlertDescription>
-        </Alert>
+        <Alert>
+        <CheckCircle2 className="h-4 w-4" />
+        <AlertTitle>Thank you!</AlertTitle>
+        <AlertDescription>Your message has been sent. I will get back to you soon.</AlertDescription>
+      </Alert>
       </div>
     )
   }
