@@ -11,10 +11,10 @@ export default async function Post({ params }: { params: { id: string } }) {
   const postData = await getPostData(params.id)
   return (
     <article className="max-w-2xl mx-auto">
-      <h1 className="text-4xl font-bold mb-4">{postData.title}</h1>
-      <p className="text-gray-500 dark:text-gray-400 mb-8">{postData.date}</p>
+      <h1 className="text-4xl font-bold mb-4 text-foreground">{postData.title}</h1>
+      <p className="text-muted-foreground mb-8">{postData.date}</p>
       <div 
-        className="prose dark:prose-invert max-w-none"
+        className="prose dark:prose-invert prose-headings:text-foreground prose-p:text-foreground prose-strong:text-foreground prose-a:text-primary hover:prose-a:text-primary/80 max-w-none"
         dangerouslySetInnerHTML={{ __html: postData.contentHtml }} 
       />
     </article>

@@ -7,9 +7,9 @@ export default function About() {
       <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
         <Image
           src="./profile3.jpg"
-          alt="Profile picture"
           width={200}
           height={200}
+          alt="Profile picture"
           className="rounded-full"
         />
         <div>
