@@ -1,5 +1,6 @@
 'use client'
 
+import BackButton from '@/app/components/BackButton';
 import { useForm, ValidationError } from '@formspree/react'
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -25,6 +26,7 @@ export default function Contact() {
 
   return (
     <div className="max-w-2xl mx-auto">
+      <BackButton />
       <h1 className="text-4xl font-bold mb-8 text-foreground">Contact Me</h1>
       <form onSubmit={handleSubmit} className="space-y-6">
         <div>

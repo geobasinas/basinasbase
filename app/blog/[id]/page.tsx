@@ -1,4 +1,5 @@
 import { getPostData, getSortedPostsData } from '@/lib/posts'
+import BackButton from '@/app/components/BackButton';
 
 export async function generateStaticParams() {
   const posts = getSortedPostsData()
@@ -11,6 +12,7 @@ export default async function Post({ params }: { params: { id: string } }) {
   const postData = await getPostData(params.id)
   return (
     <article className="max-w-2xl mx-auto">
+      <BackButton />
       <h1 className="text-4xl font-bold mb-4 text-foreground">{postData.title}</h1>
       <p className="text-muted-foreground mb-8">{postData.date}</p>
       <div 

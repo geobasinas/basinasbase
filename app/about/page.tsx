@@ -1,8 +1,10 @@
 import Image from 'next/image'
+import BackButton from '@/app/components/BackButton';
 
 export default function About() {
   return (
     <div className="max-w-2xl mx-auto">
+      <BackButton />
       <h1 className="text-4xl font-bold mb-8">About Me</h1>
       <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
         <Image

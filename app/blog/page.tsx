@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { getSortedPostsData } from '@/lib/posts'
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
+import BackButton from '@/app/components/BackButton';
 
 type Post = {
   id: string;
@@ -14,6 +15,7 @@ export default function Blog() {
 
   return (
     <div className="max-w-2xl mx-auto">
+      <BackButton />
       <h1 className="text-4xl font-bold mb-8 text-foreground">Blog</h1>
       <div className="space-y-4">
         {posts.map((post) => (
